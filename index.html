@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple YouDJ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Remplacement du titre textuel par une image -->
+        <img src="radio_etudiante.png" alt="Radio Étudiante" class="title-image">
+        <div class="deck" id="deck1">
+            <h2>Deck 1</h2>
+            <input type="file" id="file1">
+            <audio id="audio1" controls></audio>
+            <label for="volume1">Volume:</label>
+            <input type="range" id="volume1" min="0" max="1" step="0.01" value="1">
+        </div>
+        <div class="deck" id="deck2">
+            <h2>Deck 2</h2>
+            <input type="file" id="file2">
+            <audio id="audio2" controls></audio>
+            <label for="volume2">Volume:</label>
+            <input type="range" id="volume2" min="0" max="1" step="0.01" value="1">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
