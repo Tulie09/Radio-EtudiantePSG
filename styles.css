@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.deck {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
