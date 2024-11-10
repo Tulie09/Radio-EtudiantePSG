@@ -1,2 +1,2 @@
 # Radio-EtudiantePSG
-Bonjour, Voici le logiciel qu'utilise la Radio Étudiante de la Polyvalente de Saint-Georges.
+Logiciel qu'utilise la Radio Étudiante de la Polyvalente de Saint-Georges pour diffuser de la musique
