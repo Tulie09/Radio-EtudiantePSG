@@ -1,13 +1,13 @@
-/* Style général du body */
+/* Style général pour le body */
 body {
     font-family: 'Arial', sans-serif;
     background-image: url('https://github.com/Tulie09/Radio-EtudiantePSG/blob/main/background.jpg?raw=true');
-    background-size: cover; /* Assure que l'image couvre toute la surface */
-    background-position: center; /* Centrer l'image */
-    background-attachment: fixed; /* Garder l'image fixe lors du défilement */
-    color: #fff; /* Texte blanc pour contraster avec le fond */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
     text-align: center;
-    padding: 40px 20px; /* Plus de padding pour un meilleur espacement */
+    padding: 40px 20px;
     margin: 0;
 }
 
@@ -15,15 +15,15 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #fff; /* Fond blanc pour le conteneur principal */
+    background-color: #fff;
     padding: 30px;
-    border-radius: 15px; /* Coins arrondis */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre douce pour un effet moderne */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Section de recherche */
+/* Style pour la section de recherche */
 .search-section {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .search {
@@ -31,97 +31,106 @@ body {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    margin-bottom: 20px;
 }
 
-.search input {
+.search input[type="text"] {
     padding: 12px;
     width: 60%;
     font-size: 16px;
-    background-color: #444; /* Fond gris des players pour la barre de recherche */
-    color: #fff; /* Texte blanc pour la lisibilité */
-    border: none; /* Enlever la bordure */
-    border-radius: 25px; /* Coins arrondis pour l'input */
-    transition: all 0.3s ease;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
 }
 
-.search input:focus {
-    background-color: #555; /* Fond plus clair au focus */
-    outline: none; /* Enlever la bordure du focus */
+.search input[type="text"]:focus {
+    background-color: #555;
+    outline: none;
 }
 
+/* Style pour les boutons de recherche */
 .search button {
     padding: 12px 20px;
-    background-color: #444; /* Boutons gris pour correspondre à l'arrière-plan des lecteurs */
+    background-color: #444;
     color: white;
     border: none;
-    border-radius: 25px; /* Coins arrondis */
+    border-radius: 25px;
     cursor: pointer;
     font-size: 16px;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .search button:hover {
-    background-color: #555; /* Couleur plus claire au survol */
+    background-color: #555;
 }
 
 /* Section des résultats de recherche */
 #searchResults {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
 }
 
 .result {
-    position: relative;
-    display: inline-block;
+    display: flex;
+  margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
     width: 180px;
-    height: 180px;
-    background-color: #444; /* Fond gris foncé pour chaque résultat */
-    border-radius: 10px; /* Coins arrondis */
+    background-color: #444;
+    border-radius: 10px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
+    padding: 10px;
 }
 
 .result:hover {
-    transform: scale(1.05); /* Légère augmentation de taille au survol */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .result img {
     width: 100%;
-    height: 100%;
+    height: 100px;
     object-fit: cover;
+    border-radius: 5px;
+}
+
+.result-title {
+    font-size: 14px;
+    color: #fff;
+    margin: 8px 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.result-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
 }
 
 .result button {
-    position: absolute;
-    bottom: 10px;
     padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 25px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
     cursor: pointer;
-    z-index: 1;
-    transition: all 0.3s ease;
-}
-
-.result button:nth-child(2) {
-    left: 10px; /* Positionne le bouton 1 à gauche */
-}
-
-.result button:nth-child(3) {
-    right: 10px; /* Positionne le bouton 2 à droite */
+    transition: background-color 0.3s ease;
 }
 
 .result button:hover {
-    background-color: rgba(0, 0, 0, 0.9); /* Plus foncé au survol */
+    background-color: #555;
 }
 
-/* Section des lecteurs */
+/* Section des lecteurs et de l'URL */
 .players-section {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .players {
@@ -131,42 +140,41 @@ body {
 }
 
 .player {
-    margin-bottom: 20px;
-    border-radius: 10px; /* Coins arrondis pour les lecteurs */
+    border-radius: 10px;
     overflow: hidden;
     background-color: #333;
 }
 
-/* Input et boutons d'ajout de vidéo */
-input[type="text"] {
+input[type="text"]#urlInput {
     padding: 12px;
     width: 60%;
     font-size: 16px;
-    background-color: #444; /* Fond gris des players pour la barre d'URL */
-    color: #fff; /* Texte blanc */
-    border: none; /* Enlever la bordure */
+    background-color: #444;
+    color: #fff;
+    border: none;
     border-radius: 25px;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
+  margin-top: 30px;
 }
 
-input[type="text"]:focus {
-    background-color: #555; /* Fond plus clair au focus */
-    outline: none; /* Enlever la bordure du focus */
+input[type="text"]#urlInput:focus {
+    background-color: #555;
+    outline: none;
 }
 
 button {
     padding: 12px 20px;
-    background-color: #444; /* Fond gris pour tous les boutons */
+    background-color: #444;
     color: white;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     font-size: 16px;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #555; /* Couleur plus claire au survol */
+    background-color: #555;
 }
 
 /* Adaptation responsive */
@@ -186,11 +194,8 @@ button:hover {
         height: auto;
     }
 
-    .search input {
-        width: 80%;
-    }
-
-    input[type="text"] {
+    .search input[type="text"],
+    input[type="text"]#urlInput {
         width: 80%;
     }
 }
